@@ -262,12 +262,6 @@ ul {
   text-align: center;
   position: relative;
 }
-/* .home .home-image{
-    flex: 0 0 40%;
-    max-width: 40%;
-    text-align: center;
-    position: relative;
-} */
 
 .home-image::after {
   content: "";
@@ -655,19 +649,37 @@ h3.my-profession {
 }
 textarea {
   height: 140px;
-  /* background-color: red; */
+  
+}
+.portfolia-img{
+  width: 100%;
+}
+.portfolia-img img{
+  width: 100%;
+  height: 50vh;
 }
 
 /* Mobile devices */
-@media only screen and (max-width: 600px) {
-  .main-content {
-    padding-left: 0; /* Adjust as needed */
+@media only screen and (max-width: 600px){
+  body{
+    width:100%;
   }
-
-  .section {
+ 
+  .main-container{
     left: 0;
     width: 100%;
-    padding: 20px; /* Adjust as needed */
+    
+  }
+  .main-content {  
+    margin-left: -389px;
+    max-width: 86%;
+  }
+  .section {
+    background-color: var(--bg-black-900);
+    min-height: 100vh;
+    max-width: 100%;
+    opacity: 1;
+    
   }
 
   .aside {
@@ -676,28 +688,130 @@ textarea {
 
   .aside .logo-toggler {
     display: flex;
+    
   }
-
+  .home {
+    max-width: 100%;
+    min-height: 100vh;
+    display: block;
+    color: var(--text-black-900);
+    padding-top: 40px;
+    padding-left: 50px;
+    
+  }
   .row {
-    margin-left: 0;
-    margin-right: 0;
+    display: block;
   }
+  .row .home-info .btn{
+    margin-left: 40px;
+    padding: 15px;
+    font-size: 16px;
+  }
+  .home .home-image {
+    width: 100%;
+    margin-top: 60px;
+   font-size: 0.8em;
+    
+  }
+  .home .home-image img{
+    max-width: 190%;
+  }
+  .home-image::after {
+    display: none;
+  }
+  .home-image::before {
+display: none;
+  }
+  #homesection{
+    width: 100%; 
+    margin-left: 118px;
+    left: 100;
+    
+  }
+  #aboutsection{
+    width: 100%;
+    margin-left: 118px;
+    
+  }
+  #servivesection, #contactsection, #portfoliosection{
+    left: 0;
+    width: 100%;
+    
+  }
+  .about .about-content .personal-info .buttons {
 
-  /* Add more specific styles or overrides for smaller screens */
+    display: block;
+    
+  }
+  .about .about-content .personal-info .buttons .btn{
+    margin: 30px;
+  }
+  .about .about-content .education {
+   display: block;
+   max-width: 85%;
+    margin-top: 30px;
+  }
+  .about .about-content .experience {
+    display: block;
+    max-width: 85%;
+     margin-top: 30px;
+     
+   }
+   .about .about-content .skills {
+    display: block;
+    max-width: 85%;
+     margin-top: 30px;
+   }
+   .Portfolio .portfolio-item {
+    margin-bottom: 30px;
+    max-width: 112.3%;
+    flex: 0 0 33.33;
+  }
+    
+   .portfolia-img{
+    width: 100%;
+  
+  }
+  .portfolia-img img{
+    width: 100%;
+    height: 50vh;
+  }
+  
+  
 }
+ 
+
+
 
 /* Tablets */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
+@media only screen and (min-width: 601px) and (max-width: 768px) {
   .main-content {
     padding-left: 0; /* Adjust as needed */
   }
 
   .section {
+   
     left: 0;
     width: 100%;
     padding: 20px; /* Adjust as needed */
   }
+  #homesection .container .row{
+    display: block;
+   
+  }
+  
+  #homesection .container .row .home-info{
+    margin-left: 300px;
+  }
+  #homesection .container .row .home-image{
+    margin-left: 300px;
+    margin-top: 80px;
+  }
 
+.home-image::after {
+  right: -15px;
+  bottom: -90px;
+}
   .aside {
     display: none;
   }
@@ -705,19 +819,34 @@ textarea {
   .aside .logo-toggler {
     display: flex;
   }
-
-  .row {
-    margin-left: 0;
-    margin-right: 0;
+  
+  .row .personal-info-row{
+    padding-left: 274px;
+    
   }
-
-  /* Add more specific styles or overrides for tablets */
+  .row .about-text{
+    padding-left: 301px;
+  }
+  .about .about-content .education {
+    
+    max-width: 70%;
+    margin-top: 98px;
+    margin-left: 301px;
+  }
+  .about .about-content .experience {
+    /* flex: 0 0 50%; */
+    max-width: 100%;
+    margin-top: 98px;
+    margin-left: 301px;
+  }
+ 
 }
 
 /* Larger screens (desktops, laptops) */
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width:761px) and (max-width: 1034px)  {
   .main-content {
-    padding-left: 270px; /* Adjust as needed */
+    padding-left: 270px; 
+    
   }
 
   .section {
@@ -725,7 +854,10 @@ textarea {
     width: calc(100% - 270px);
     padding: 30px;
   }
-
+.row{
+  display: flex;
+  flex-direction: row;
+}
   .aside {
     display: flex;
   }
@@ -733,6 +865,29 @@ textarea {
   .aside .logo-toggler {
     display: none;
   }
+  #homesection .container .row{
+    display: block;
+   
+  }
+  .about .about-content .education {
+    flex:none;
+    max-width: 70%;
+    /* margin-top: 98px;
+    margin-left: 301px; */
+  }
+  .about .about-content .experience {
+    flex:none;
+    /* max-width: 100%;
+    margin-top: 98px;
+    margin-left: 301px; */
+  }
 
   /* Add more specific styles or overrides for larger screens */
+}
+@media only screen and (min-width:1035px) and (max-width: 2000px) {
+  .main-content {
+    padding-left: 270px; 
+  
+  }
+
 }
